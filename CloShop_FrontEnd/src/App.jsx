@@ -1,18 +1,17 @@
-import CardCollection from "./components/MainComponent/DisplaySection/Collection Card/CardCollection"
-import ListBuy from "./components/MainComponent/DisplaySection/HomeBuySection/ListBuy"
-import Header from './components/Header/Header'
-import Footer from './components/Footer/Footer'
-import ImageScroller from "./components/MainComponent/TopSection/ImageScllorer"
+import {BrowserRouter as Router, Route,Routes } from "react-router-dom"
+import Home from "./Home"
+import AuthForm from "./components/AuthForm/AuthForm"
+import CollectionPage from "./components/CollectionPage/CollectionPage"
 function App() {
   return (
-    <>
-      <Header/>
-      <ImageScroller/>
-      <ListBuy/>
-      <CardCollection/>
-      <ListBuy Heading='Trending Now'/>
-      <Footer/>
-    </>
+  <Router>
+    <Routes>
+      <Route path={'/'} element={<Home/>}/>
+      <Route path={'/login'} element={<AuthForm/>}/>
+      <Route path={'/sign_in'} element={<AuthForm/>}/>
+      <Route path="/collection" element={<CollectionPage/>}/>
+    </Routes>
+  </Router>
   )
 }
 

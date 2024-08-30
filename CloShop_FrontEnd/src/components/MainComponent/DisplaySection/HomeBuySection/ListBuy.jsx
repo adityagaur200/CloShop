@@ -1,9 +1,11 @@
 import React from 'react'
 import {Stack , Box ,Button, Typography} from "@mui/material"
 import ProductCard from './ProductCard/ProductCard'
+import { useNavigate } from 'react-router-dom';
 
 const ListBuy = (props) => {
   const{Heading} = props;
+  const navigate=useNavigate();
   return (
     <Stack direction={'column'} gap={2} justifyContent={'center'} alignItems={'center'} mb={4}>
       <Typography fontWeight={"bold"} fontSize={30}>
@@ -17,7 +19,7 @@ const ListBuy = (props) => {
         <ProductCard/>
       </Stack>
       <Box>
-      <Button variant='outlined'>View All</Button>
+      <Button variant='outlined' onClick={()=>navigate('/collection')}>View All</Button>
       </Box>
     </Stack>
     
