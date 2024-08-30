@@ -6,9 +6,9 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaPinterest } from "react-icons/fa";
 const Footer = () => {
   return (
-    <Box width={"100%"}>
-       <Stack direction={'column'} justifyContent={'center'} alignItems={'center'} gap={2}>
-            <Stack direction={'row'} gap={4} justifyContent={'center'}>
+    <Box width={"100%"} height={'350px'} borderTop={'2px solid grey'}>
+       <Stack direction={'column'} alignItems={'center'} gap={2} mt={18}>
+            <Stack direction={'row'} gap={4} alignItems={'center'}>
                 <FaFacebook size={30}/>
                 <FaGoogle size={30}/>
                 <FaXTwitter size={30}/>
@@ -16,7 +16,8 @@ const Footer = () => {
             </Stack> 
             <Typography fontStyle={'bold'} justifyContent={'center'}>
                 Made in India
-            </Typography>    
+            </Typography> 
+
        </Stack>
     </Box>
   )

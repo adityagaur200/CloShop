@@ -1,18 +1,26 @@
 import React from 'react'
-import {Stack , Box} from "@mui/icons-material"
+import {Stack , Box ,Button, Typography} from "@mui/material"
 import ProductCard from './ProductCard/ProductCard'
 
-const ListBuy = () => {
+const ListBuy = (props) => {
+  const{Heading} = props;
   return (
-
-    <Box width={"100%"}>
-    <Stack direction={'column'} alignItems={'center'} gap={2} justifyContent={'center'}> 
+    <Stack direction={'column'} gap={2} justifyContent={'center'} alignItems={'center'} mb={4}>
+      <Typography fontWeight={"bold"} fontSize={30}>
+        {Heading}
+      </Typography>
+      <Stack direction={'row'} alignItems={'center'} gap={2} justifyContent={'center'}> 
         <ProductCard/>
         <ProductCard/>
         <ProductCard/>
         <ProductCard/>
+        <ProductCard/>
+      </Stack>
+      <Box>
+      <Button variant='outlined'>View All</Button>
+      </Box>
     </Stack>
-    </Box>
+    
     )
 }
 

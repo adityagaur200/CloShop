@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
+
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
@@ -19,27 +19,15 @@ export default function DropDown() {
   const DrawerList = (
     <Box sx={{ width: 300 }} role="presentation" onClick={toggleDrawer(false)}>
       <List>
-        {['HOME', 'NEW ARRIVAL', 'BEST SELLING', 'CLOSHOP LUXE'].map((text, index) => (
+        {['HOME', 'NEW ARRIVAL', 'BEST SELLING', 'CLOSHOP LUXE','PLACE A RETURN/REPLACEMENT','CUSTOMER SUPPORT'].map((text, index) => (
           <ListItem key={text}  disablePadding>
             <ListItemButton>
               <ListItemText primary={text} />
+              <Divider variant="middle"/>
             </ListItemButton>
           </ListItem>
         ))}
       </List>
-
-    <Box marginTop={30}>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </Box>
     </Box>
   );
 

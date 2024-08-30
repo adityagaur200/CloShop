@@ -4,7 +4,7 @@ import Card from './Card'
 
 const CardCollection = () => {
   return (
-    <Box width={"100%"}>
+    <Box width={"100%"} mb={5}>
         <Stack direction={'column'} alignItems={'center'} gap={2} justifyContent={'center'}>
             <Stack>
                 <Typography fontSize={35} fontWeight={'bold'}>

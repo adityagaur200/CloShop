@@ -1,13 +1,14 @@
 import React from 'react'
 import DescriptionPart from './DescriptionPart'
 import ImagePart from './ImagePart'
+import { Box } from '@mui/material'
 
 const ProductCard = () => {
   return (
-    <div>
+    <Box>
         <ImagePart/>
         <DescriptionPart/>
-    </div>
+    </Box>
   )
 }
 

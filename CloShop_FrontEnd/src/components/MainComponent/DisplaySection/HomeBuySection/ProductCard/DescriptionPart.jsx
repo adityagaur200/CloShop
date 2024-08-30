@@ -1,8 +1,14 @@
 import React from 'react'
-import {Stack} from "@mui/icons-material"
+import {Stack,Typography,Button} from "@mui/material"
 const DescriptionPart = () => {
   return (
-    <Stack>
+    <Stack mt={1} mb={1}>
+      <Typography fontSize={14} fontFamily={'sans-serif'}>
+          Night Sky
+      </Typography>
+      <Typography >
+        799
+      </Typography>
     </Stack>
   )
 }
