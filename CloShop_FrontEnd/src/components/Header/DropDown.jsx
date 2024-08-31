@@ -8,6 +8,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useNavigate } from 'react-router-dom';
+import { Stack } from '@mui/material';
 
 export default function DropDown() {
   const [open, setOpen] = React.useState(false);
@@ -44,14 +45,17 @@ export default function DropDown() {
         </ListItem>
         <Divider variant="middle" />
         <ListItem disablePadding>
-          <ListItemButton  onClick={()=>navigate('/Service')}>
+          <ListItemButton  onClick={()=>navigate('/Profile')}>
             <ListItemText primary="PLACE A RETURN/REPLACEMENT" />
           </ListItemButton>
         </ListItem>
         <Divider variant="middle" />
         <ListItem disablePadding>
-          <ListItemButton onClick={()=>navigate('/Service')}>
+          <ListItemButton>
+            <Stack direction={'column'}>
             <ListItemText primary="CUSTOMER SUPPORT" />
+            <ListItemText primary="+91 762342342" />
+            </Stack>
           </ListItemButton>
         </ListItem>
       </List>
