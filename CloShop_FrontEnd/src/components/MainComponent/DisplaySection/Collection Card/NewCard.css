@@ -1,0 +1,98 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background-color: #f0f0f0; /* Light background color for contrast */
+  }
+  
+  .app-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .card {
+    position: relative;
+    width: 100%;
+    padding-bottom: 150%; /* This creates a 2:3 aspect ratio */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(231, 230, 230, 0.775);
+    transition: transform 0.35s ease-in-out, box-shadow 0.35s ease-in-out;
+  }
+  
+  .cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    transition: transform 0.35s ease-in-out;
+  }
+  
+  .cover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.733) 0%, rgba(255, 255, 255, 0.689) 100%);
+    border-radius: 12px;
+    mix-blend-mode: overlay;
+    opacity: 0;
+    transition: opacity 0.35s ease-in-out;
+  }
+  
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    background: rgb(235, 234, 234);
+    box-shadow: 0 8px 20px rgba(245, 244, 244, 0.899);
+    border-radius: 12px;
+    opacity: 0.2;
+    transition: opacity 0.35s ease-in-out, transform 0.35s ease-in-out;
+    z-index: -1;
+  }
+  
+  .card:hover .cover {
+    transform: scale(1.05);
+  }
+  
+  .card:hover .cover::after {
+    opacity: 0.4;
+  }
+  
+  .card:hover::before {
+    opacity: 0.4;
+    transform: scale(1.1);
+  }
+  
+  @media screen and (max-width: 760px) {
+    .container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  

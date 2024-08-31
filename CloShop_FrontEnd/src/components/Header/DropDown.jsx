@@ -44,13 +44,13 @@ export default function DropDown() {
         </ListItem>
         <Divider variant="middle" />
         <ListItem disablePadding>
-          <ListItemButton  onClick={()=>navigate('/Profile')}>
+          <ListItemButton  onClick={()=>navigate('/Service')}>
             <ListItemText primary="PLACE A RETURN/REPLACEMENT" />
           </ListItemButton>
         </ListItem>
         <Divider variant="middle" />
         <ListItem disablePadding>
-          <ListItemButton onClick={()=>navigate('/support')}>
+          <ListItemButton onClick={()=>navigate('/Service')}>
             <ListItemText primary="CUSTOMER SUPPORT" />
           </ListItemButton>
         </ListItem>
