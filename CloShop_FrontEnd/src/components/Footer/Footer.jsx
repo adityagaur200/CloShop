@@ -9,10 +9,10 @@ const Footer = () => {
     <Box width={"100%"} height={'350px'} borderTop={'2px solid grey'}>
        <Stack direction={'column'} alignItems={'center'} gap={2} mt={18}>
             <Stack direction={'row'} gap={4} alignItems={'center'}>
-                <FaFacebook size={30}/>
-                <FaGoogle size={30}/>
-                <FaXTwitter size={30}/>
-                <FaPinterest size={30}/>
+                <FaFacebook size={30} style={{cursor:"pointer"}}/>
+                <FaGoogle size={30} style={{cursor:"pointer"}}/>
+                <FaXTwitter size={30} style={{cursor:"pointer"}}/>
+                <FaPinterest size={30} style={{cursor:"pointer"}}/>
             </Stack> 
             <Typography fontStyle={'bold'} justifyContent={'center'}>
                 Made in India

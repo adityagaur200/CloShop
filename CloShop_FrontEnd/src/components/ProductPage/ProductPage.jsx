@@ -34,25 +34,29 @@ const ProductPage = () =>
                 style={{ width: "120px", height: "160px", cursor: 'pointer' }} 
                 onClick={handleImageChange}
                 alt="Thumbnail 1"
+                cursor="pointer"
               />
               <img 
                 src="./ExampleImage.jpg" 
                 style={{ width: "120px", height: "160px", cursor: 'pointer' }} 
                 onClick={handleImageChange}
                 alt="Thumbnail 2"
+                cursor="pointer"
               />
               <img 
                 src="./ExampleImage.jpg" 
                 style={{ width: "120px", height: "160px", cursor: 'pointer' }} 
                 onClick={handleImageChange}
                 alt="Thumbnail 3"
+                cursor="pointer"
               />
             </Stack>
             <Box align="right" mr={8}>
               <img 
                 src={selectedImage} 
                 style={{ width: "350px", height: "550px" }} 
-                alt="Selected"
+                alt="Selected" 
+                cursor="pointer"
               />
             </Box>
           </Stack>

@@ -2,7 +2,7 @@ import React from 'react'
 import {Stack,Typography,Button} from "@mui/material"
 const DescriptionPart = () => {
   return (
-    <Stack mt={1} mb={1} ml={1}>
+    <Stack mt={1} mb={1} ml={1} sx={{cursor:"pointer"}}>
       <Typography fontSize={14} fontFamily={'sans-serif'}>
           Night Sky
       </Typography>

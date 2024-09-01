@@ -16,14 +16,14 @@ function IconBox() {
   
   return (
     <>
-    <Stack direction={'row'} gap={2} justifyContent={'center'}>
-      <Box onClick={()=>navigate('/Profile')}>
+    <Stack direction={'row'} gap={2} justifyContent={'center'} >
+      <Box onClick={()=>navigate('/Profile')} sx={{cursor:"pointer"}}>
         <LuUser2 size={30}/>
       </Box>
-      <Box>
+      <Box sx={{cursor:"pointer"}}>
         <IoSearchOutline size={30}/>
       </Box>
-      <Box onClick={handleCart}>
+      <Box onClick={handleCart} sx={{cursor:"pointer"}}>
         <BsCart3 size={30}/>
       </Box>
     </Stack>
