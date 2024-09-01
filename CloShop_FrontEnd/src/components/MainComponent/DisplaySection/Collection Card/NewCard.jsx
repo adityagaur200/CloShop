@@ -10,7 +10,7 @@ const NewCard = () => {
   ];
 
   return (
-    <div className="app-container">
+    <div className="app-container" style={{marginBottom:"25px"}}>
       <div className="container">
         {images.map((image, index) => (
           <div

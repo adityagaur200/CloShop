@@ -1,14 +1,20 @@
 import {Stack, Typography } from '@mui/material'
-import React from 'react'
+import React, { useState } from 'react'
 import { CiLogout } from 'react-icons/ci'
 import { FaRegUser } from 'react-icons/fa'
 import { FcLike } from 'react-icons/fc'
 import { IoIosCart } from 'react-icons/io'
 import { LuPackageCheck, LuReplace } from 'react-icons/lu'
 import { useNavigate } from 'react-router-dom'
+import CartPopUp from '../Cart/CartPopUp'
 
 const SideBar = () => {
+    const [isCartOpen, setIsCartOpen] = useState(false);
     const navigate = useNavigate();
+    const handleCart =()=>
+    {
+        setIsCartOpen(!isCartOpen)
+    }
   return (
     <Stack direction={"column"} gap={2}>
     <Stack direction={'row'} justifyContent={'center'} alignItems={'center'} gap={2}>
@@ -18,7 +24,7 @@ const SideBar = () => {
         </Typography>
         
     </Stack>
-    <Stack direction={'row'} justifyContent={'center'} alignItems={'center'} gap={2} onClick={()=>navigate('/Cart')}>
+    <Stack direction={'row'} justifyContent={'center'} alignItems={'center'} gap={2} onClick={handleCart}>
         <IoIosCart size={30}/>
         <Typography fontSize={18} >
             Cart
@@ -46,6 +52,8 @@ const SideBar = () => {
         </Typography>
        
     </Stack>
+    
+    <CartPopUp open={isCartOpen} onClose={() => setIsCartOpen(false)} />
 </Stack>
   )
 }

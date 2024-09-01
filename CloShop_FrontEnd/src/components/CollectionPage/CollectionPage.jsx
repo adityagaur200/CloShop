@@ -2,6 +2,7 @@ import React from 'react';
 import ProductCard from '../MainComponent/DisplaySection/HomeBuySection/ProductCard/ProductCard';
 import { Box } from '@mui/material';
 import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 
 const CollectionPage = () => {
   return (
@@ -41,6 +42,7 @@ const CollectionPage = () => {
         <ProductCard/>
         </Box>
       </Box>
+      <Footer/>
     </>
   );
 };

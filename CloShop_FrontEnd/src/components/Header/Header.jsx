@@ -5,7 +5,8 @@ import IconBox from './IconBox'
 
 const Header = () => {
   return (
-    <Stack direction={'row'} justifyContent={'space-between'} alignItems={'center'}>
+    <Box sx={{height:"8vh"}} borderBottom={'2px solid white'}>
+      <Stack direction={'row'} justifyContent={'space-between'} alignItems={'center'} mt={2}>
       <Box>
         <DropDown/>
       </Box>
@@ -18,6 +19,7 @@ const Header = () => {
         <IconBox/>
       </Box>
     </Stack>
+    </Box>
   )
 }
 

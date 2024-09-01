@@ -64,7 +64,7 @@ export default function DropDown() {
 
   return (
     <div>
-      <Box onClick={toggleDrawer(true)} ml={2}>
+      <Box onClick={toggleDrawer(true)} ml={2} mt={2}>
         <RxHamburgerMenu size={30} />
       </Box>
       <Drawer open={open} onClose={toggleDrawer(false)}>

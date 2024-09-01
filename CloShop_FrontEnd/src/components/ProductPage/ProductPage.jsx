@@ -3,11 +3,13 @@ import { Box, Button, Divider, Stack, Typography } from '@mui/material'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import CartPopUp from '../Cart/CartPopUp'
+import Footer from '../Footer/Footer'
+import Header from '../Header/Header'
 
 const ProductPage = () =>
    {
     const [isCartOpen, setIsCartOpen] = useState(false);
-    const navigate = useNavigate();
+    
     const [selectedImage, setSelectedImage] = useState('./ExampleImage.jpg');
 
     // Function to handle image change
@@ -22,6 +24,7 @@ const ProductPage = () =>
   
     return (
       <>
+      <Header/>
       <Stack direction={"row"} alignContent={'center'} justifyContent={'center'} mt={10}>
         <Box width={750} height={600}>
           <Stack direction={'row'} gap={15} ml={5}>
@@ -91,6 +94,7 @@ const ProductPage = () =>
         </Box>
     </Stack>
       <CartPopUp open={isCartOpen} onClose={() => setIsCartOpen(false)} />
+      <Footer/>
       </>
   )
 }
