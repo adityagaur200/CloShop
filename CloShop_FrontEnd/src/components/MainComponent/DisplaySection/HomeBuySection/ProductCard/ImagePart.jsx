@@ -3,7 +3,7 @@ import {Box, Container} from "@mui/material"
 const ImagePart = () => {
   return (
     <Box>
-      <img src='ExampleImage.jpg' style={{width:"270px",height:"420px",overflow:"hidden", cursor:"pointer"}}/>
+      <img src='ExampleImage.jpg' style={{width:"270px",height:"350px",overflow:"hidden", cursor:"pointer"}}/>
     </Box>
   )
 }
