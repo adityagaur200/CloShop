@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import CartPopUp from '../Cart/CartPopUp'
 import Footer from '../Footer/Footer'
 import Header from '../Header/Header'
+import Reviews from './Review'
 
 const ProductPage = () =>
    {
@@ -70,6 +71,7 @@ const ProductPage = () =>
             <Typography>
                 Reviews
             </Typography>
+            <Reviews/>
 
             <Typography>
                 INR 7000
