@@ -26,7 +26,7 @@ public class SecurityConfig
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.csrf(AbstractHttpConfigurer::disable)
-                .authorizeHttpRequests(request -> request.requestMatchers("/All","/Products/Add","/login","/register","/Products/all","/Products/product/","/Products/search","/Cart/add","/Cart/delete","/order/All_Orders","/order/Place_Order","api/payment/verifyPayment","api/payment/createOrder").permitAll().anyRequest().authenticated())
+                .authorizeHttpRequests(request -> request.requestMatchers("/All","/Products/Add","/login","/register","/Products/all","/Products/product/","/Products/product/{id}","/Products/search","/Cart/add","/Cart/delete","/order/All_Orders","/order/Place_Order","api/payment/verifyPayment","api/payment/createOrder").permitAll().anyRequest().authenticated())
                 .httpBasic(Customizer.withDefaults())
                 .sessionManagement(session ->session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .build();
