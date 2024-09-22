@@ -1,11 +1,10 @@
 package com.closhop.backend.repo;
 
-import com.closhop.backend.Models.Orders;
+import com.closhop.backend.Models.OrderDetails;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.Optional;
 @Repository
-public interface OrderRepo extends MongoRepository<Orders, String>{
+public interface OrderRepo extends MongoRepository<OrderDetails, String>{
 
 }

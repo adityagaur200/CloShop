@@ -2,13 +2,12 @@ package com.closhop.backend.Controller;
 import com.closhop.backend.Models.Users;
 import com.closhop.backend.Services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.awt.*;
 
 @RestController
-@RequestMapping
+@RequestMapping("/")
 public class UserController
 {
     @Autowired
@@ -23,5 +22,11 @@ public class UserController
     public String login(@RequestBody Users user) {
 
         return userService.verify(user);
+    }
+
+    @GetMapping("/All")
+    public java.util.List<Users> allUser()
+    {
+        return userService.getAll();
     }
 }

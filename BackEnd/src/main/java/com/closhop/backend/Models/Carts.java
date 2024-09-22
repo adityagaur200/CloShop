@@ -18,5 +18,4 @@ public class Carts
     private double price;
     private String product_id;
     private String product_name;
-    private String product_description;
 }
