@@ -22,7 +22,7 @@ public class PaymentController {
         int amountInRupees = (int) data.get("amount");
         int amountInPaise = amountInRupees * 100;
 
-        RazorpayClient client = new RazorpayClient("rzp_test_bPUZ9ObUiSQJ2u", "Gk0Jxkvaac4geJ35wfIT5RMH");
+        RazorpayClient client = new RazorpayClient("rzp_test_nzjxF4wDxNbYDf", "JX8c50tbrVD6mW39zQSq7s0K");
 
         JSONObject orderRequest = new JSONObject();
         orderRequest.put("amount", amountInPaise); // Amount in paise
