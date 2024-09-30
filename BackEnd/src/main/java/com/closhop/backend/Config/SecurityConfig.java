@@ -12,7 +12,6 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.core.userdetails.UserDetailsPasswordService;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
@@ -26,7 +25,7 @@ public class SecurityConfig
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.csrf(AbstractHttpConfigurer::disable)
-                .authorizeHttpRequests(request -> request.requestMatchers("/All","/Products/Add","/login","/register","/Products/all","/Products/product/","/Products/product/{id}","/Products/search","/Cart/add","/Cart/delete","/order/All_Orders","/order/Place_Order","api/payment/verifyPayment","api/payment/createOrder").permitAll().anyRequest().authenticated())
+                .authorizeHttpRequests(request -> request.requestMatchers("user/All","/Products/Add","/user/login","/user/register","/Products/all","/Products/product/","/Products/product/{id}","/Products/search","/Cart/add","/Cart/delete","/order/All_Orders","/order/Place_Order","api/payment/verifyPayment","api/payment/createOrder").permitAll().anyRequest().authenticated())
                 .httpBasic(Customizer.withDefaults())
                 .sessionManagement(session ->session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .build();
