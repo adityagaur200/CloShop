@@ -13,7 +13,7 @@ function App() {
       <Route path={'/login'} element={<AuthForm/>}/>
       <Route path={'/sign_in'} element={<AuthForm/>}/>
       <Route path="/collection" element={<CollectionPage/>}/>
-      <Route path="/product" element={<ProductPage/>}/>
+      <Route path="/product/:id" element={<ProductPage/>}/>
       <Route path="/Profile" element={<Profile/>}/>
       <Route path='/admin' element={<AdminPanel/>}/>
     </Routes>
